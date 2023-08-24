@@ -174,7 +174,7 @@ p,
 }
 .logo-con span {
   position: absolute;
-  right: 0;
+  right: 100px;
   top: 50%;
   transform: translate(100%, -50%);
   font-style: italic;
@@ -187,6 +187,7 @@ p,
 .logo-con {
   float: left;
   position: relative;
+  width: 150px;
   background-color: transparent;
 }
 .logo::after {
@@ -221,20 +222,38 @@ p,
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: white;
+  background-color: rgb(204, 242, 36);
   bottom: -4px;
 }
 .nav-list{
-  /* position: relative; */
   display: inline-block;
 }
 .hr-nav li ul {
   background-color: rgba(0, 0, 0, 0.342);
   position: absolute;
-  /* left: 0; */
+  top: 100%;
+  translate: -30%;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  background-color: rgb(204, 242, 36);
+}
+.nav-list li a::before{
+  height: 0;
+}
+.nav-list li a{
+  color: black;
+  font-size: 1rem;
+}
+.nav-list:hover ul{
+  opacity: 1;
+  visibility: visible;
 }
 .hr-nav li .contact {
   color: rgb(204, 242, 36);
+}
+.hr-nav li .contact::before{
+  background-color: white;
 }
 /* HOME  */
 /* HOME  */
@@ -264,7 +283,8 @@ p,
   padding-top: 40vh;
 }
 .hc-h {
-  font-size: 50px;
+  font-size: 55px;
+  text-transform: uppercase;
   width: 70%;
   margin: auto;
 }
@@ -278,6 +298,19 @@ p,
   border-radius: 5px;
   border: none;
   font-size: 1.3rem;
+  position: relative;
+}
+.btn::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: .4s;
+  left: 0;
+  top: 0;
+}
+.btn:hover::after{
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .btn-start {
   background-color: rgb(204, 242, 36);
@@ -645,7 +678,53 @@ p,
 .news p{
   font-size: 1rem;
 }
+.news span,
+.news .icons{
+  transition: .4s;
+}
 .news .icons{
   margin-top: 25px;
+}
+.pl{
+  padding-left: 15px;
+}
+.news a{
+  color: rgb(97, 149, 255);
+  transition: .5s;
+}
+.news .sec-item:hover *{
+  color: white;
+}
+.news .sec-item:hover i,
+.news .sec-item:hover a{
+  color: rgb(208, 255, 0);
+}
+/* footer */
+/* footer */
+/* footer */
+.footer{
+background-color: rgb(20, 20, 20);
+padding: 20px 0 40px;
+}
+.footer ul li{
+  display: inline-block;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(97, 149, 255);;
+}
+.footer img{
+  width: 200px;
+  margin: auto;
+}
+.footer .links i{
+  color: white;
+  line-height: 50px;
+}
+.footer p{
+  margin-top: 20px;
+  color: rgb(228, 228, 228);
+  font-size: .8rem;
 }
 /* rgb(204, 242, 36) */
